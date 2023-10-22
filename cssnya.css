@@ -1,0 +1,255 @@
+:root {
+    --primary: grey;
+    --bg: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: white;
+    */ border-bottom: 1px solid #513c20;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
+.navbar .navbar-nav a {
+    color: black;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s(linear);
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: black;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+
+#menu {
+    display: none;
+}
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: grey;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.5s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover:after {
+        transform: scaleX(0.2);
+    }
+}
+
+/* hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}
+.col{
+    flex-direction: column;
+}
+.about_me{
+    
+    background-color: #2B2929;
+    height: 100vh;
+    width: 100%;
+    perspective: 1000px; 
+}
+.about_me img{
+    height: 95vh;
+    width: 700px;
+}
+
+.about_me .about_me_content .about_me_box {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 700px;
+    color: #6F6E6E;
+    background-color: #535151;
+    border-radius: 50px;
+    margin: 10px 0px;
+}
+
+
+
+.journey-card{
+    margin-top: 40px;
+    margin-right: 20px;
+    align-items: center;
+    display: inline-block;
+
+}
+.journey-card-1{
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+    align-items: center;
+    display: inline-block;
+
+}
+
+.row{
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+
+.journey{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    justify-content: center;
+    background-image: url(bg4.jpg);
+    background-size: cover;
+    background-position: 0px-120px;
+
+}
+
+.journey-card-img{
+    width: 15rem;
+}
+
+.journey-card-title{
+    text-align: center;
+    color: white;
+}
+
+.music{
+   
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    color: white;
+    justify-content: center;
+    align-items: end;
+    background-position: 0px-120px;
+
+    background-position: 0px-120px;
+}
+
+.music-img{
+    justify-content: center;
+    align-items: center;
+}
+
+.fandom {
+    background-color: black;
+}
+
+
+
+/* laptop */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
